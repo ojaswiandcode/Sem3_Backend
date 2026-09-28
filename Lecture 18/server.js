@@ -29,9 +29,7 @@ app.use((err,req,res,next)=>{  //error middleware
     res.status(500).json({success:false, message:err.message});
 })
 
-app.use((req,res)=>{  //invalid route middleware
-    res.status(404).json({success:false, message:"Page not found"});
-})
+
 
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
